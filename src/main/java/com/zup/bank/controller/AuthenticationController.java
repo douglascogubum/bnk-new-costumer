@@ -13,8 +13,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.zup.bank.model.dto.LoginFormDTO;
-import com.zup.bank.model.dto.TokenDTO;
+import com.zup.bank.config.security.dto.LoginFormDTO;
+import com.zup.bank.config.security.dto.TokenDTO;
 import com.zup.bank.services.TokenService;
 
 import io.swagger.annotations.ApiOperation;

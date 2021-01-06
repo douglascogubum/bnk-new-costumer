@@ -1,4 +1,4 @@
-package com.zup.bank.controller.exceptions;
+package com.zup.bank.controller.exceptions.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

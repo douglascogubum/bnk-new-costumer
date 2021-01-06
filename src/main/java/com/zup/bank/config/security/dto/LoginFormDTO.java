@@ -1,4 +1,4 @@
-package com.zup.bank.model.dto;
+package com.zup.bank.config.security.dto;
 
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
