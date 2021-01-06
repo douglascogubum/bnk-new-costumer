@@ -3,34 +3,31 @@ package com.zup.bank.model.dto;
 import java.io.Serializable;
 import java.time.LocalDate;
 
-import javax.persistence.Column;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 
-import org.springframework.format.annotation.DateTimeFormat;
-
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.zup.bank.model.validation.CpfConstraint;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
+@NoArgsConstructor
 public class CostumerDTO implements Serializable{
 	private static final long serialVersionUID = 1L;
 	
 	private Long id;
 	
-	@NotBlank
+	@NotBlank(message="O campo do nome é obrigatório")
 	private String name;
 	
-	@Email
-	@Column(unique = true)
+	@Email(message="Email deve seguir o padrão")
 	private String email;
 	
 	@CpfConstraint
-	@Column(unique = true)
 	private String cpf;
 	
-	@DateTimeFormat(pattern="dd/MM/yyyy")
-	@Column(name = "birth_date")
+	@JsonFormat(pattern = "dd/MM/yyyy")
 	private LocalDate birthDate;
 }

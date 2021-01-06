@@ -1,0 +1,12 @@
+{"properties": [
+  {
+    "name": "bank.jwt.expiration",
+    "type": "java.lang.String",
+    "description": "A description for 'bank.jwt.expiration'"
+  },
+  {
+    "name": "bank.jwt.secret",
+    "type": "java.lang.String",
+    "description": "A description for 'bank.jwt.secret'"
+  }
+]}

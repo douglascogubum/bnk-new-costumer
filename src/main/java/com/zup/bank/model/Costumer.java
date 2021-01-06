@@ -3,6 +3,7 @@ package com.zup.bank.model;
 import java.io.Serializable;
 import java.time.LocalDate;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -20,9 +21,15 @@ public class Costumer implements Serializable{
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	
+
 	private String name;
+
+	@Column(unique = true)
 	private String email;
+	
+	@Column(unique = true)
 	private String cpf;
+	
+	@Column(name = "birth_date")
 	private LocalDate birthDate;
 }
