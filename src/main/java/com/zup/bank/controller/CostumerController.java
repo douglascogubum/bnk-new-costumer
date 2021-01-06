@@ -16,6 +16,16 @@ import com.zup.bank.model.Costumer;
 import com.zup.bank.model.dto.CostumerDTO;
 import com.zup.bank.services.CostumerService;
 
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiResponse;
+import io.swagger.annotations.ApiResponses;
+
+@ApiOperation(value = "Cadastra um cliente")
+@ApiResponses(value = {
+	    @ApiResponse(code = 200, message = "Retorna cliente salvo"),
+	    @ApiResponse(code = 403, message = "Você não tem permissão para acessar este recurso"),
+	    @ApiResponse(code = 400, message = "Houve um erro na validação dos campos"),
+	})
 @RestController
 @RequestMapping(value = "/api/v1/costumers")
 public class CostumerController {

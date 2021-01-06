@@ -17,6 +17,17 @@ import com.zup.bank.model.dto.LoginFormDTO;
 import com.zup.bank.model.dto.TokenDTO;
 import com.zup.bank.services.TokenService;
 
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiResponse;
+import io.swagger.annotations.ApiResponses;
+
+@ApiOperation(value = "Retorna Token JWT para uso no Front-end")
+@ApiResponses(value = {
+	    @ApiResponse(code = 200, message = "Token retornado com sucesso"),
+	    @ApiResponse(code = 403, message = "Você não tem permissão para acessar este recurso"),
+	    @ApiResponse(code = 400, message = "Houve um erro na validação dos campos"),
+	})
+
 @RestController
 @RequestMapping("/api/v1/auth")
 public class AuthenticationController {
