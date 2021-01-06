@@ -43,7 +43,7 @@ public class SwaggerConfigurations {
 	    return new ApiInfoBuilder()
 	            .title("Bank Spring Boot exemplo")
 	            .description("Um exemplo de aplicação Spring Boot REST API")
-	            .version("1.0.0")
+	            .version("0.1.0")
 	            .license("Apache License Version 2.0")
 	            .licenseUrl("https://www.apache.org/licenses/LICENSE-2.0")
 	            .contact(new Contact("Douglas Cogubum", "http://www.zup.com.br", "doug_cogubum@htomail.com"))
