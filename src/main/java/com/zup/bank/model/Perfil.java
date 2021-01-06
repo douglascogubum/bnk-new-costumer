@@ -7,23 +7,21 @@ import javax.persistence.Id;
 
 import org.springframework.security.core.GrantedAuthority;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@Getter
-@Setter
+@Builder
+@Getter @Setter
+@NoArgsConstructor @AllArgsConstructor
 public class Perfil implements GrantedAuthority {
 	
 	private static final long serialVersionUID = 1L;
 
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;	
-	private String name;
-
-	@Override
-	public String getAuthority() {
-		return name;
-	}
-	
+	private String authority;	
 }
