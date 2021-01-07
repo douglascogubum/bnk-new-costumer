@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.zup.bank.mapper.CostumerMapper;
+import com.zup.bank.mapper.CostumerDTOMapper;
 import com.zup.bank.model.Costumer;
 import com.zup.bank.model.dto.CostumerDTO;
 import com.zup.bank.services.CostumerService;
@@ -34,7 +34,7 @@ public class CostumerController {
 	private CostumerService service;
 	
 	@Autowired
-	private CostumerMapper mapper;
+	private CostumerDTOMapper mapper;
 	
 	@PostMapping
 	public ResponseEntity<CostumerDTO> registrate(@Valid @RequestBody CostumerDTO costumerDto) throws MethodArgumentNotValidException {
