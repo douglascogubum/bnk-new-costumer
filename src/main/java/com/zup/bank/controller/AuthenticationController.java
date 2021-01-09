@@ -39,7 +39,7 @@ public class AuthenticationController {
 	private TokenService tokenService;
 	
 	@PostMapping
-	public ResponseEntity<TokenDTO> authenticate(@RequestBody @Valid LoginFormDTO form) {
+	public ResponseEntity<TokenDTO> authenticate(@Valid @RequestBody LoginFormDTO form) {
 		UsernamePasswordAuthenticationToken login = form.converter();
 		try {
 			Authentication authentication = authManager.authenticate(login);

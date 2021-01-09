@@ -5,7 +5,6 @@ import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -37,7 +36,7 @@ public class CostumerController {
 	private CostumerDTOMapper mapper;
 	
 	@PostMapping
-	public ResponseEntity<CostumerDTO> registrate(@Valid @RequestBody CostumerDTO costumerDto) throws MethodArgumentNotValidException {
+	public ResponseEntity<CostumerDTO> registrate(@Valid @RequestBody CostumerDTO costumerDto) {
 		return ResponseEntity.status(HttpStatus.OK).body(entityToDto(costumerDto));
 	}
 
