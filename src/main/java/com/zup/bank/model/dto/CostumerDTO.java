@@ -22,6 +22,7 @@ public class CostumerDTO implements Serializable{
 	@NotBlank(message="O campo do nome é obrigatório")
 	private String name;
 	
+	@NotBlank
 	@Email(message="Email deve seguir o padrão")
 	private String email;
 	
